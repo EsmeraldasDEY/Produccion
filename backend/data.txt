@@ -1,0 +1,31 @@
+
+# @router.post("/estacion", response_description="Create a new book", status_code=status.HTTP_201_CREATED, response_model=List[Datos_sensor])
+# def obtener_prediccion_actual(request: Request, estaciones: Estaciones = Body(...)):
+#     estaciones = jsonable_encoder(estaciones)
+#     datos_sensores: List[Datos_sensor] = list(
+#         request.app.database[estaciones["estacion"]].find().sort([('_id', -1)]).limit(1))
+
+#     return datos_sensores
+
+
+
+
+
+
+
+
+
+# @router.get("/query", response_description="Lista el primer documento insertado", response_model=Prediccion)
+# def get_datos_sensores(request: Request):
+#     datos_sensores: List[Datos_sensor] = list(
+#         request.app.database["sacha"].find().sort([('_id', -1)]).limit(1))
+
+#     X_test = np.array([
+#         3, 0, datos_sensores[0]["rain"], datos_sensores[0]["temperatura"], datos_sensores[0]["rh"],
+#         datos_sensores[0]["dew_point"], datos_sensores[0]["wind_speed"],
+#         datos_sensores[0]["gust_speed"],
+#         datos_sensores[0]["wind_direction"]
+#     ])
+#     prediction = request.app.model.predict(X_test.reshape(1, -1))
+#     return {"incidencia": prediction[0]}
+
